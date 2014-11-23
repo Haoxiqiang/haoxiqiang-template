@@ -2,7 +2,8 @@
 layout: post
 title:  "Welcome4"
 date:   2014-12-01 12:19:05
-categories: [design,java,ios,css,javascript]
+author: 郝锡强
+tags: [design,java,ios,css,javascript]
 ---
 in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

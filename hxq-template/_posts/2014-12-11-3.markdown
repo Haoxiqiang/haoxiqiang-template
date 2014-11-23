@@ -2,7 +2,8 @@
 layout: post
 title:  "3"
 date:   2014-12-11 21:19:05
-categories: [design,java,blog,css,javascript]
+author: 郝锡强
+tags: [design,java,blog,css,javascript]
 ---
 
 
