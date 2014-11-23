@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<div class="content pure-u-1 pure-u-md-3-4">
+  <div>
+<header class="post-header">
+
+<h2 class="post-title">{{ page.title }}</h2>
+
+<p class="post-meta">By  {{ page.date | date: "%m" }}月{{ page.date | date: "%d" }}日  {{ page.date | date: "%Y" }}  <a
+        class="post-category-0 " href="/type/#{{ post.categories  }}">{{ page.categories  }}</a><a
+        class="post-category-1 " href="/tag/#{{ page.tags | first }}"> {{ page.tags | first }}</a><a
+        class="post-category-2 " href="/tag/#{{ page.tags[1] }}">  {{ page.tags[1] }}</a>
+</p>
+</header>
+<div class="article pure-u-22-24">
+{{ content }}
+</div>
+<div class="pure-g pagination">
+    {% if page.previous %}
+    <a class="pure-u-1-2 pagination-item " href="{{ page.previous.url | prepend: site.baseurl }}" title="{{ page.previous.title }} "><p> <i class="fa fa-mail-reply"></i>&nbsp;{{ page.previous.title }}</p></a>
+    {% else %}
+    <span class="pure-u-1-2 pagination-item "><p>上一篇&nbsp;<i class="fa fa-chain-broken"></i></p></span>
+    {% endif %}
+    {% if page.next %}
+    <a class="pure-u-1-2 pagination-item " href="{{ page.next.url | prepend: site.baseurl }}" title="{{ page.next.title }}"><p>{{ page.next.title }}&nbsp;<i class="fa fa-mail-forward"></i></p></a>
+    {% else %}
+    <span class="pure-u-1-2 pagination-item "><p>下一篇&nbsp;<i class="fa fa-chain-broken"></i></p></span>
+    {% endif %}
+</div>
+    {% include footer.html %}
+  </div>
+</div>
+

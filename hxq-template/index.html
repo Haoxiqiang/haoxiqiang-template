@@ -1,0 +1,63 @@
+---
+layout: default
+---
+<div class="content pure-u-1 pure-u-md-3-4">
+  <div>
+    <!-- A wrapper for all the blog posts -->
+    <div class="posts">
+     <!--    <h1 class="content-subhead">Pinned Post</h1> -->
+
+
+  {% for post in paginator.posts %}
+
+
+    <section class="post">
+      <header class="post-header">
+
+        <h2 class="post-title">{{ post.title }}</h2>
+          <p class="post-meta">By {{ post.date | date: "%m" }}月{{ post.date | date: "%d" }}日  {{ post.date | date: "%Y" }}  
+            <a class="post-category-tag" href="/type/#{{ post.categories | first }}"> {{ post.categories | first }}</a>
+            <a class="post-category-tag" href="/type/#{{ post.categories[1] }}">  {{ post.categories[1] }}</a>
+            <a class="post-category-tag" href="/type/#{{ post.categories[2] }}">  {{ post.categories[2] }}</a>
+          </p>
+      </header>
+
+        <div class="post-description">
+            {{ post.content | split:'<!-- more -->'| first }}
+
+
+            <a href="{{ post.url | prepend: site.baseurl }}" class="post-category-read">阅读全文</a>
+        </div>
+    </section>
+
+{% endfor %}
+</div>
+
+
+<div class="pure-g pagination">
+    
+    {% if paginator.previous_page %}
+      
+      {% if paginator.page == 2 %}
+        <a class="pure-u-1-2 pagination-item" href="{{site.baseurl }}/"><p>Newer</p></a>
+      {% else %}
+        <a class=" pure-u-1-2 pagination-item" href="{{'/page/' | prepend: site.baseurl }}{{paginator.previous_page}}"><p>Newer</p></a>
+      {% endif %}
+
+    {% else %}
+      <a class=" pure-u-1-2 pagination-item" href="{{'/page/' | prepend: site.baseurl }}{{paginator.previous_page}}"><p>Newer</p></a>
+    {% endif %}
+
+    {% if paginator.next_page %}
+      <a class=" pure-u-1-2 pagination-item" href="{{'/page/' | prepend: site.baseurl }}{{paginator.next_page}}"><p>Older</p></a>
+    {% else %}
+      <span class=" pure-u-1-2 pagination-item"><p>Older</p></span>
+    {% endif %}
+
+</div>
+
+    {% include footer.html %}
+  </div>
+</div>
+
+
