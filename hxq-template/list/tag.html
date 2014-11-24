@@ -36,11 +36,5 @@ title : 标签
     </div>
     {% endfor %}
 </div>
-<link rel="stylesheet" href="/css/min/type.css" type="text/css"  media="screen" />
-<script src="/js/min/jquery.highight.min.js"></script>
 
-<script type="text/javascript">
-    $(function(){
-        $(".f5").jquerybaHighlight({HighlightClass:"Highlight"});
-    });
-</script>
+<link rel="stylesheet" href="{{ '/css/type.css' | prepend: site.baseurl }}" type="text/css" media="screen" />

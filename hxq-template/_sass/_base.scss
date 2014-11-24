@@ -40,31 +40,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /**
- * Links
- */
-a {
-    color: $brand-color;
-    text-decoration: none;
-
-    &:visited {
-
-        text-decoration: line-through;
-        color: #757575;
-    }
-
-    &:hover {
-        color: $text-color;
-        text-decoration: underline;
-    }
-    &:focus {
-        color: $text-color;
-        text-decoration: underline;
-    }
-}
-
-
-
-/**
  * Blockquotes
  */
 blockquote {
@@ -187,6 +162,30 @@ pre {
     -webkit-box-shadow: 1px 1px 1px #bdbdbd;
     box-shadow: 1px 1px 1px #bdbdbd;
 }
+a {
+
+    color: $brand-color;
+    text-decoration: none;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+
+    &:visited {
+
+        text-decoration: line-through;
+        color: #757575;
+    }
+
+    &:hover {
+        color: $text-color;
+        text-decoration: underline;
+    }
+    &:focus {
+        color: $text-color;
+        text-decoration: underline;
+    }
+}
 
 .post-title {
     font-size: 3em;
@@ -276,10 +275,6 @@ pre {
     -webkit-box-shadow: 1px 1px 2px #bdbdbd;
     box-shadow: 1px 1px 2px #bdbdbd;
 }
-.comment{
-     margin: 0.5em 3em 0.5em 1em;
-}
-
 .pagination-item {
     border: 1px solid #eee;
     text-align:center;
@@ -312,6 +307,15 @@ a.pagination-item{
         text-decoration: underline;
         color: #1CA3FC;
     }
+}
+
+.comment{
+     margin: 0.5em 3em 0.5em 1em;
+}
+.pure-menu,.pure-menu-open{
+    background: #f5f5f5 !important;
+    margin: 0 auto;
+    text-align: center;
 }
 
 @include media-query($on-laptop) {

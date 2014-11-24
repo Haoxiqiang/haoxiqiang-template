@@ -18,7 +18,7 @@ layout: default
               </p>
           </header>
 
-            <div class="post-description">
+            <div class="post-content">
                 {{ post.content | split:'<!-- more -->'| first }}
 
 
@@ -40,18 +40,19 @@ layout: default
               <a class="pagination-item" href="{{'/page/' | prepend: site.baseurl }}{{paginator.previous_page}}">Newer</a>
             {% endif %}
 
-            {% else %}
-              <a class="pagination-item" href="{{'/page/' | prepend: site.baseurl }}{{paginator.previous_page}}">Newer</a>
-            {% endif %}
+          {% else %}
+              <span class="pagination-item">已在第一頁</span>
+          {% endif %}
         </div>
         <div class="pure-u-1-2">
           {% if paginator.next_page %}
             <a class="pagination-item" href="{{'/page/' | prepend: site.baseurl }}{{paginator.next_page}}">Older</a>
           {% else %}
-            <span class="pagination-item">Older</span>
+            <span class="pagination-item">已在最終頁</span>
           {% endif %}
         </div>
     </div>
+
 
     {% include footer.html %}
 </div>
