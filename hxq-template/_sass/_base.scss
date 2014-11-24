@@ -115,47 +115,63 @@ pre {
 }
 
 /*hxq*/
-.header {
-    text-align: center;
-    top: auto;
-    margin: 3em auto;
-}
-
 .sidebar {
     background: $sidebar-backgroud;
     color: #fff;
+    text-align: center;
 }
-
-@media (min-width: 48em) {
-    .content {
-        padding: 2em 3em 0;
-        margin-left: 25%;
-    }
-
-    .header {
-        margin: 80% 2em 0;
-        text-align: right;
-    }
-
-    .sidebar {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-    }
+.sidebar-header {
+    clear: both;
+    margin:3em auto;
 }
-
-.content {
-    padding: 2em 1em 0;
+.sidebar-header a{
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
 }
-
-.content-subhead {
+.sidebar-header-pic img{
+    max-width: 100%;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+.sidebar-title {
     text-transform: uppercase;
-    color: #aaa;
-    border-bottom: 1px solid #eee;
-    padding: 0.4em 0;
-    font-size: 80%;
-    font-weight: 500;
-    letter-spacing: 0.1em;
+}
+.sidebar-tagline {
+    font-weight: 300;
+    color: rgb(176, 202, 219);
+}
+
+.sidebar-nav-list {
+    margin: 0;
+    padding:0 20px;
+    list-style: none;
+}
+.sidebar-nav-item {
+    display: inline-block;
+    zoom: 1;
+}
+.sidebar-nav-item a {
+    background: transparent;
+    border: 2px solid rgb(176, 202, 219);
+    color: #fff;
+    margin-top: 1em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 85%;
+    &:hover{
+        border: 2px solid rgb(61, 146, 201);
+        text-decoration: none;
+    }
+    &:focus{
+        border: 2px solid rgb(61, 146, 201);
+        text-decoration: none;
+    }
 }
 
 .site-content {
@@ -163,11 +179,8 @@ pre {
 }
 
 .post{
-    padding-bottom: 2em;
-    margin-bottom: 2em;
-    margin-right: 2em;
-    padding-left: 5%;
-    padding-right: 5%;
+    margin:0.5em 0.5em;
+    padding: 1em 2em;
     border: 1px solid #eeeeee;
     background:#fafafa;
     -moz-box-shadow: 1px 1px 1px #bdbdbd;
@@ -179,38 +192,10 @@ pre {
     font-size: 3em;
     letter-spacing: -1px;
     line-height: 1;
-    margin: 1em  0em 0em 0em;
+    margin: 0.1em  0em 0em 0em;
 }
 
 .post-content {
-    margin-bottom: $spacing-unit;
-
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
-
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
-}
-
-.post-description {
     color: #444;
     line-height: 1.8em;
     overflow: hidden;
@@ -220,24 +205,6 @@ pre {
     font-size: $small-font-size;
     color: $grey-color;
     margin: 0;
-}
-
-
-.page{
-    padding-right:5%;
-    letter-spacing:0;
-}
-.page-meta {
-    @extend .post-meta;
-}
-
-.page-title{
-    @extend .post-title;
-    margin:0em 0em;
-}
-
-.comment{
-     padding-right:5%;
 }
 
 %post-category {
@@ -298,18 +265,19 @@ pre {
 }
 .post-category-blog {
     @extend %post-category;
-    background: #df2d4f;
+    background: #00CEAA;
 }
 
 
 .pagination{
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-right: 2em;
+    margin: 1em 3em;
     background:#fafafa;
     -moz-box-shadow: 1px 1px 2px #bdbdbd;
     -webkit-box-shadow: 1px 1px 2px #bdbdbd;
     box-shadow: 1px 1px 2px #bdbdbd;
+}
+.comment{
+     margin: 0.5em 3em 0.5em 1em;
 }
 
 .pagination-item {
@@ -319,6 +287,11 @@ pre {
     display: inline-block;
     padding : 1em 0em;
     color: #000;
+}
+.pagination-item-no{
+    @extend .pagination-item;
+
+    color: #acacac;
 }
 a.pagination-item{
     
@@ -338,6 +311,27 @@ a.pagination-item{
     &:visited {
         text-decoration: underline;
         color: #1CA3FC;
+    }
+}
+
+@include media-query($on-laptop) {
+    .footer-col-1,
+    .footer-col-2 {
+        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+        width:         calc(50% - (#{$spacing-unit} / 2));
+    }
+
+    .footer-col-3 {
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
+    }
+}
+
+@include media-query($on-palm) {
+    .footer-col {
+        float: none;
+        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+        width:         calc(100% - (#{$spacing-unit} / 2));
     }
 }
 
