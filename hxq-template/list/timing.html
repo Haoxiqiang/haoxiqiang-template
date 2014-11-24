@@ -2,36 +2,34 @@
 layout: default
 title : Timing
 ---
-<div class="archive" >
+<div class="timing">
+    <ul id='timeline'>
+        <article>
+            {% for post in site.posts reverse %}
+            {% if post.layout == 'post' %}
+            
+                <section class="main">
+                      
+                          <li class='work'>
+                            <input class='radio' id='{{ post.date | date: "%Y%m%d" }}' name='works' type='radio' checked>
+                            <div class="relative">
+                              <label for='{{ post.date | date: "%Y%m%d" }}'>{{ post.title }}</label>
+                              <span class='date'>{{ post.date | date: "%Y年%m月%d日" }}</span>
+                              <span class='circle'></span>
+                            </div>
+                            <div class='timeline-content'>
+                              <p>
+                                {{ post.content | split:'<!-- more -->'| first }}
+                              </p>
+                            </div>
+                          </li>
+                       
+                </section>
 
-    {% for post in site.posts reverse %}
-    {% if post.layout == 'post' %}
-    <article>
-        <section class="main">
-
-            <ul class="timeline">
-
-                <li class="event">
-                    <input type="radio" name="tl-group" checked/>
-                    <label></label>
-                        <div class="thumb" style="backgroud-image:'{{'/img/headicon.png'| prepend: site.baseurl }}'">
-                            <span>{{ post.date | date: "%m月%d日"" }}</span>
-                        </div>
-                        <div class="content-perspective">
-                                <div class="content">
-                                    <div class="content-inner">
-                                        <h3>{{post.title}}</h3>
-                                            <p>Don't be too proud of this technological terror you've constructed. The ability to destroy a planet is insignificant next to the power of the Force. The plans you refer to will soon be back in our hands. A tremor in the Force. The last time I felt it was in the presence of my old master. Escape is not his plan. I must face him. Alone.</p>
-                                    </div>
-                                </div>
-                        </div>
-                </li>
-            </ul>
-        </section>
-
-    {% endif %}
-    {% endfor %}
-    </article>
+            {% endif %}
+            {% endfor %}
+        </article>
+    </ul>
 </div>
 <link rel="stylesheet" href="{{ '/css/timeline.css' | prepend: site.baseurl }}" type="text/css" media="screen" />
 

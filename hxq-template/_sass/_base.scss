@@ -134,7 +134,7 @@ pre {
 .sidebar-nav-item a {
     background: transparent;
     border: 2px solid rgb(176, 202, 219);
-    color: #fff;
+    color: white;
     margin-top: 1em;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -145,6 +145,10 @@ pre {
     }
     &:focus{
         border: 2px solid rgb(61, 146, 201);
+        text-decoration: none;
+    }
+    &:visited{
+        color: white;
         text-decoration: none;
     }
 }
