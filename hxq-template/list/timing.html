@@ -2,34 +2,24 @@
 layout: default
 title : Timing
 ---
-<div class="timing">
-    <ul id='timeline'>
-        <article>
-            {% for post in site.posts reverse %}
-            {% if post.layout == 'post' %}
-            
-                <section class="main">
-                      
-                          <li class='work'>
-                            <input class='radio' id='{{ post.date | date: "%Y%m%d" }}' name='works' type='radio' checked>
-                            <div class="relative">
-                              <label for='{{ post.date | date: "%Y%m%d" }}'>{{ post.title }}</label>
-                              <span class='date'>{{ post.date | date: "%Y年%m月%d日" }}</span>
-                              <span class='circle'></span>
-                            </div>
-                            <div class='timeline-content'>
-                              <p>
-                                {{ post.content | split:'<!-- more -->'| first }}
-                              </p>
-                            </div>
-                          </li>
-                       
-                </section>
-
-            {% endif %}
-            {% endfor %}
-        </article>
-    </ul>
-</div>
+<ul class="cbp_tmtimeline">
+ 
+  
+  {% for post in site.posts reverse %}
+  {% if post.layout == 'post' %}
+    
+        <li>
+          <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>{{ post.date | date: "%m/%d/%Y" }}</span> <span>{{ post.date | date: "%H:%m" }}</span></time>
+          <div class="cbp_tmicon cbp_tmicon-phone"></div>
+          <div class="cbp_tmlabel">
+            <h2>{{ post.title}}</h2>
+            <p>{{ post.content | split:'<!-- more -->'| first }}</p>
+          </div>
+        </li>
+    
+  {% endif %}
+  {% endfor %}
+</ul>
 <link rel="stylesheet" href="{{ '/css/timeline.css' | prepend: site.baseurl }}" type="text/css" media="screen" />
+   
 

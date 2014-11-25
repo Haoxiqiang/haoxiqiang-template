@@ -1,169 +1,199 @@
-/* -------------------------------------
- * timeline
- * ------------------------------------- */
-.timing{
-  margin: 2.5em 2.5em;
+/**
+ * this css from Vertical Timeline
+ **/
+code{
+  background: transparent;
+  border: 0px;
 }
-#timeline {
-  list-style:none;
-  margin: 2em 2em 2em 7em;
-  padding-left: 2em;
-  border-left: 0.4em solid #eee9dc;
+a{
+  color: white;
+  text-decoration: underline;
 }
-#timeline li {
-  margin: 2.5em 0;
+a:hover,a:focus,a:visited{
+    color: white;
+}
+
+
+.cbp_tmtimeline {
+  margin: 30px 0 0 0;
+  padding: 0;
+  list-style: none;
   position: relative;
-}
-#timeline p {
-  margin: 0 0 1em;
-}
+} 
 
-.radio {
-  display: none;
-}
-
-.radio:checked + .relative label {
-  cursor: auto;
-  transform: translateX(2.5em);
-}
-.radio:checked + .relative .circle {
-  background: #f98262;
-}
-.radio:checked ~ .timeline-content {
-  max-height: 10em;
-  border-color: #eee9dc;
-  margin-right: 1em;
-  transform: translateX(20px);
-  transition: max-height 0.4s linear, border-color 0.5s linear, transform 0.2s linear;
-}
-.radio:checked ~ .timeline-content p {
-  max-height: 200px;
-  color: #eee9dc;
-  transition: color 0.3s linear 0.3s;
-}
-
-.date {
-  margin-top: -10px;
-  top: 50%;
-  left: -158px;
-  font-size: 0.95em;
-  line-height: 1.25em;
+/* The line */
+.cbp_tmtimeline:before {
+  content: '';
   position: absolute;
-}
-
-.circle {
-  margin-top: -10px;
-  top: 50%;
-  left: -44px;
+  top: 0;
+  bottom: 0;
   width: 10px;
-  height: 10px;
-  background: #48b379;
-  border: 5px solid #eee9dc;
-  border-radius: 50%;
+  background: #afdcf8;
+  left: 20%;
+  margin-left: -10px;
+}
+
+/* The date/time */
+.cbp_tmtimeline > li {
+  position: relative;
+}
+
+.cbp_tmtimeline > li .cbp_tmtime {
   display: block;
+  width: 25%;
+  padding-right: 100px;
   position: absolute;
 }
 
-.timeline-content {
-  max-height: 20px;
-  padding: 50px 20px 0;
-  border-color: transparent;
-  border-width: 2px;
-  border-style: solid;
-  border-radius: 0.5em;
-  position: relative;
-
+.cbp_tmtimeline > li .cbp_tmtime span {
+  display: block;
+  text-align: right;
 }
-.timeline-content:before, .timeline-content:after {
-  content: "";
-  width: 0;
-  height: 0;
+
+.cbp_tmtimeline > li .cbp_tmtime span:first-child {
+  font-size: 0.9em;
+  color: #bdd0db;
+}
+
+.cbp_tmtimeline > li .cbp_tmtime span:last-child {
+  font-size: 2.9em;
+  color: #3594cb;
+}
+
+
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child {
+  color: #6cbfee;
+}
+
+/* Right content */
+.cbp_tmtimeline > li .cbp_tmlabel {
+  margin: 0 0 15px 25%;
+  background: #3594cb;
+  color: #fff;
+  padding: 2em;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.4;
+  position: relative;
+  border-radius: 5px;
+}
+
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
+  background: #6cbfee;
+}
+
+.cbp_tmtimeline > li .cbp_tmlabel h2 { 
+  margin-top: 0px;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+/* The triangle */
+.cbp_tmtimeline > li .cbp_tmlabel:after {
+  right: 100%;
   border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
   position: absolute;
   pointer-events: none;
-  right: 100%;
-}
-.timeline-content:before {
-  border-right-color: inherit;
-  border-width: 20px;
-  top: 50%;
-  margin-top: -20px;
-}
-.timeline-content:after {
-  border-right-color: #48b379;
-  border-width: 17px;
-  top: 50%;
-  margin-top: -17px;
-}
-.timeline-content p {
-  max-height: 0;
-  color: transparent;
-  text-align: justify;
-  word-break: break-word;
-  hyphens: auto;
-  overflow: hidden;
+  border-right-color: #3594cb;
+  border-width: 10px;
+  top: 10px;
 }
 
-label {
-  font-size: 1.3em;
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
+  border-right-color: #6cbfee;
+}
+
+/* The icons */
+.cbp_tmtimeline > li .cbp_tmicon {
+  width: 40px;
+  height: 40px;
+  font-family: 'ecoico';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  font-size: 1.4em;
+  line-height: 40px;
+  -webkit-font-smoothing: antialiased;
   position: absolute;
-  z-index: 100;
-  cursor: pointer;
-  top: 20px;
-  transition: transform 0.2s linear;
+  color: #fff;
+  background: #46a4da;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px #afdcf8;
+  text-align: center;
+  left: 20%;
+  top: 0;
+  margin: 0 0 0 -25px;
 }
 
-/* -------------------------------------
- * mobile phones (vertical version only)
- * ------------------------------------- */
-@media screen and (max-width: 767px) {
-  #timeline {
-    margin-left: 0;
-    padding-left: 0;
-    border-left: none;
-  }
-  #timeline li {
-    margin: 50px 0;
-  }
+.cbp_tmicon-phone:before {
+  content: "";
+}
 
-  label {
-    width: 85%;
-    font-size: 1.1em;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    display: block;
-    transform: translateX(18px);
-  }
+.cbp_tmicon-screen:before {
+  content: "";
+}
 
-  .timeline-content {
-    padding-top: 45px;
-    border-color: #eee9dc;
-  }
-  .timeline-content:before, .timeline-content:after {
-    border: solid transparent;
-    bottom: 100%;
-  }
-  .timeline-content:before {
-    border-bottom-color: inherit;
-    border-width: 17px;
-    top: -16px;
-    left: 50px;
-    margin-left: -17px;
-  }
-  .timeline-content:after {
-    border-bottom-color: #48b379;
-    border-width: 20px;
-    top: -20px;
-    left: 50px;
-    margin-left: -20px;
-  }
-  .timeline-content p {
-    font-size: 0.9em;
-    line-height: 1.4;
-  }
+.cbp_tmicon-mail:before {
+  content: "";
+}
 
-  .circle, .date {
+.cbp_tmicon-earth:before {
+  content: "";
+}
+
+
+/* Example Media Queries */
+@media screen and (max-width: 65.375em) {
+
+  .cbp_tmtimeline > li .cbp_tmtime span:last-child {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 47.2em) {
+  .cbp_tmtimeline:before {
     display: none;
   }
+
+  .cbp_tmtimeline > li .cbp_tmtime {
+    width: 100%;
+    position: relative;
+    padding: 0 0 20px 0;
+  }
+
+  .cbp_tmtimeline > li .cbp_tmtime span {
+    text-align: left;
+  }
+
+  .cbp_tmtimeline > li .cbp_tmlabel {
+    margin: 0 0 30px 0;
+    padding: 1em;
+    font-weight: 400;
+    font-size: 95%;
+  }
+
+  .cbp_tmtimeline > li .cbp_tmlabel:after {
+    right: auto;
+    left: 20px;
+    border-right-color: transparent;
+    border-bottom-color: #3594cb;
+    top: -20px;
+  }
+
+  .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
+    border-right-color: transparent;
+    border-bottom-color: #6cbfee;
+  }
+
+  .cbp_tmtimeline > li .cbp_tmicon {
+    position: relative;
+    float: right;
+    left: auto;
+    margin: -55px 5px 0 0px;
+  } 
 }
