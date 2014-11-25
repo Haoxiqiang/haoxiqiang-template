@@ -1,8 +1,13 @@
 /**
  * Reset some basic elements
  */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
-body, h1, h2, h3, h4, h5, h6,
+h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
     margin: 0;
@@ -18,7 +23,7 @@ body {
     
     -webkit-text-size-adjust: 100%;
     background: #f5f5f5;
-    overflow-x:hidden;
+
 }
 
 code.has-jax {font: inherit; font-size: 100%; background: inherit; border: inherit;}
@@ -91,10 +96,16 @@ pre {
 }
 
 /*hxq*/
+html,body,#layout{
+    min-height: 100%;
+    padding: 0;
+    height: 100%;
+}
 .sidebar {
     background: $sidebar-backgroud;
     color: #fff;
     text-align: center;
+    overflow-y:hidden; 
 }
 .sidebar-header {
     clear: both;
@@ -323,24 +334,21 @@ a.pagination-item{
     text-align: center;
 }
 
-@include media-query($on-laptop) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
+@media (min-width: 48em) {
+    .content {
+        // padding: 2em 3em 0;
+        margin-left: 25%;
     }
 
-    .footer-col-3 {
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
+    .header {
+        margin: 80% 2em 0;
+        text-align: right;
     }
-}
 
-@include media-query($on-palm) {
-    .footer-col {
-        float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
     }
 }
 
@@ -363,8 +371,8 @@ a.pagination-item{
 
     > svg {
         display: inline-block;
-        width: 16px;
-        height: 16px;
+        width: 1em;
+        height: 1em;
         vertical-align: middle;
 
         path {

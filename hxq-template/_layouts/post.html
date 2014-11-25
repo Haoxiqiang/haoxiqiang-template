@@ -2,7 +2,7 @@
 layout: default
 comments: true
 ---
-<div class="content" >
+<div>
     <!-- A wrapper for all the blog posts -->
     <div class="post">
      <!--    <h1 class="content-subhead">Pinned Post</h1> -->
@@ -46,3 +46,11 @@ comments: true
 
     {% include footer.html %}
 </div>
+{% if page.letex  %}
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+{% endif %}

@@ -4,16 +4,36 @@
   {% include head.html %}
   {% include analytics.html %}
 
-  <body>
-    <div id="layout" class="pure-g">
-      {% include header.html %}
+<body>
+  <div id="layout" class="pure-g">
+      <div class="sidebar pure-u-1 pure-u-md-1-4">
+
+          <div class="sidebar-header">
+              <div class="sidebar-header-pic">
+                  <a href="{{'/'| prepend: site.baseurl}}">
+                      <img src="{{'/img/headicon.png'| prepend: site.baseurl }}" alt="Profile Picture" style="width: 140px;" title="返回首页">
+                  </a>
+              </div>
+              <h1 class="sidebar-title">郝锡强的博客</h1>
+              <h2 class="sidebar-tagline">什么都喜欢写点</h2>
+
+              <nav class="sidebar-nav">
+                  <ul class="sidebar-nav-list">
+                      <li class="sidebar-nav-item">
+                          <a class="pure-button" href="{{'/list/timing.html'| prepend: site.baseurl }}">时间轴</a>
+                      </li>
+                      <li class="sidebar-nav-item">
+                          <a class="pure-button" href="{{'/list/tag.html'| prepend: site.baseurl }}">标签库</a>
+                      </li>
+                  </ul>
+              </nav>
+          </div>
+      </div>
 
       <div class="content pure-u-1 pure-u-md-3-4">
           {{ content }}
       </div>
-
-     
-    </div>
-  </body>
+  </div>
+</body>
 
 </html>
