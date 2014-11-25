@@ -20,10 +20,8 @@ layout: default
 
             <div class="post-content">
                 {{ post.content | split:'<!-- more -->'| first }}
-
-
-                <a href="{{ post.url | prepend: site.baseurl }}" class="post-category-read">阅读全文</a>
             </div>
+             <a href="{{ post.url | prepend: site.baseurl }}" class="post-category-read">阅读全文</a>
         </section>
 
       {% endfor %}
