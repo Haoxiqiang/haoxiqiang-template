@@ -3,6 +3,7 @@ layout: post
 title:  "3"
 date:   2014-12-11 21:19:05
 author: 郝锡强
+categories: blog
 tags: [design,java,blog,css,javascript]
 ---
 

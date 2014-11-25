@@ -21,23 +21,21 @@ include:      [".htaccess"]
 exclude:      []
 keep_files:   [".git", ".svn"]
 encoding:     "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 textile_ext:  "textile"
 
-#rdiscount解析器对于嵌入html javascript代码,为文章增加特定效果兼容较好
-markdown: rdiscount
-excerpt_separator: "\n\n"
+#markdown: rdiscount
+markdown: kramdown
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 highlighter: pygments
 
-rdiscount:
-  extensions: []
+kramdown: 
+  parse_block_html: true
+  input: GFM
 
-redcarpet:
-  extensions: []
-
-permalink: /:title.html
+permalink: /:categories/:year-:month-:title.html
 paginate: 5
 paginate_path: /page/:num
+relative_permalinks: false
 
 
 #在发布文章时使用一个未来的日期

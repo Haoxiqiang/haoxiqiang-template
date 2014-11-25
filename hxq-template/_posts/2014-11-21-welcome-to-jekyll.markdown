@@ -3,6 +3,7 @@ layout: post
 title:  "Welcome to Jekyll!"
 date:   2014-11-21 22:18:05
 author: 郝锡强
+categories: blog
 tags: [design,android,java,ios,blog,css,javascript]
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
@@ -37,18 +38,11 @@ Demo:[郝锡强'Blog](http://liyouhai.com/)
 
 Github:[JekyllPure'github](https://github.com/liyouhai/JekyllPure)
 
-##版本更新
-----------
-|版本   | 时间  | 说明|
-| :-------- | :--------| :------ |
-| V0.4.2| 2014-05-12 22:00|第一个版本  |
-|V0.4.2.1| 2014-05-16 22:00|修复提交github生成的错误,错误原因rss.xml有全局变量|
-|V0.5.0|2014-05-27 16:00|1.修复主页分页.标签与分类URL.<br>2.Font Awesome更新为4.1.0<br> 3.替换一些小图标为Font<br> 4.blockquote下的li增加数字前缀样式<br>5.一些导航html移到Public文件夹<br>|
-|V1.0.0|2014-09-19 16:45:04| 1.Pure正式为Pure v0.5.0 <br> 2.毫无技术的使用了Pure官方的blog布局 <br> 3.兼容性全面支持ie <br> 4.Font Awesome更新为4.2.0 兼容ie7<br>  5. jquery降级到1.7.2 为了兼容ie <br> 6.jwplayer加载不需要远程获取js<br> 7.多说js也调用本地js <br>  8.index.js增加主题颜色随着星期变换.可删除<br> 9.以后小修改请参照博客源码<br>10.欢迎随便修改使用.有问题留言|
 
 ##使用技术
 
 ----------
+
 |项目基于   | 说明  | 版本 |
 | :-------- | :--------| :--: |
 |[Jekyll](http://jekyllrb.com/)  |静态博客| Version 2.3.2|
