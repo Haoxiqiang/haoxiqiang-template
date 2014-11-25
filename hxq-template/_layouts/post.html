@@ -40,7 +40,11 @@ comments: true
     </div>
     <div class="comment">
         {% if page.comments  %}
-            {% include comments.html %}
+          {% if site.comments %}
+            {% include comments-disqus.html %}
+          {% else %}
+            {% include comments-duoshuo.html %}
+          {% endif %}
         {% endif %}
     </div>
 
