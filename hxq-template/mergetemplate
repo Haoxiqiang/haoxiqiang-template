@@ -1,0 +1,6 @@
+#!/bin/bash
+
+
+cd template/hxq-template
+git checkout master
+git pull
