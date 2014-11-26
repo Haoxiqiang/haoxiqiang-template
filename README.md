@@ -6,3 +6,10 @@ The template from [Pure](http://purecss.io/)
 
 You can easily create your blog by the jekyll template.
 
+
+##License
+>
+  Apache License
+  Version 2.0, January 2004
+  http://www.apache.org/licenses/
+
