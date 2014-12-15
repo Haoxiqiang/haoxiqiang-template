@@ -6,18 +6,18 @@ title : Timing
  
   
   {% for post in site.posts reverse %}
-  {% if post.layout == 'post' %}
-    
-        <li>
-          <time class="cbp_tmtime" datetime="2013-04-10 18:30"><span>{{ post.date | date: "%m/%d/%Y" }}</span> <span>{{ post.date | date: "%H:%m" }}</span></time>
-          <div class="cbp_tmicon cbp_tmicon-phone"></div>
-          <div class="cbp_tmlabel">
-            <h2>{{ post.title}}</h2>
-            <p>{{ post.content | split:'<!-- more -->'| first }}</p>
-          </div>
-        </li>
-    
-  {% endif %}
+    {% if post.layout == 'post' %}
+      
+          <li>
+            <time class="cbp_tmtime"><span>{{ post.date | date: "%m/%d/%Y" }}</span> <span>{{ post.date | date: "%H:%m" }}</span></time>
+            <div class="cbp_tmicon cbp_tmicon-phone"></div>
+            <div class="cbp_tmlabel">
+              <h2>{{ post.title}}</h2>
+              <p>{{ post.content | split:'<!-- more -->'| first }}</p>
+            </div>
+          </li>
+      
+    {% endif %}
   {% endfor %}
 </ul>
 <link rel="stylesheet" href="{{ '/css/timeline.css' | prepend: site.baseurl }}" type="text/css" media="screen" />

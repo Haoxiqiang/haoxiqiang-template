@@ -1,16 +1,14 @@
 title: 郝锡强的博客
 email: haoxiqiang@live.com
 #production_url是sitemap.txt生成的url,方便百度谷歌收录
-production_url: http://haoxiqiang.info
+production_url: http://www.haoxiqiang.info
 #
 # Jekyll Settings
 #
 
 # Serving
 detach:  false
-port:    4000
-host:    127.0.0.1
-url: "http://haoxiqiang.info"
+url: "http://www.haoxiqiang.info"
 baseurl: ""
 twitter_username: haoxiqiang
 github_username:  haoxiqiang
@@ -31,7 +29,7 @@ highlighter: pygments
 kramdown: 
   input: GFM
 
-permalink: /:categories/:year-:month-:title.html
+permalink: /:categories/:year:month:day-:title.html
 paginate: 5
 paginate_path: /page/:num
 relative_permalinks: false

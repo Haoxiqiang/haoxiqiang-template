@@ -15,7 +15,7 @@ a:hover,a:focus,a:visited{
 
 
 .cbp_tmtimeline {
-  margin: 30px 0 0 0;
+  margin: 1.5em 1em 0.5em 1em;
   padding: 0;
   list-style: none;
   position: relative;
@@ -27,10 +27,9 @@ a:hover,a:focus,a:visited{
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 10px;
+  width: 0.8em;
   background: #afdcf8;
   left: 20%;
-  margin-left: -10px;
 }
 
 /* The date/time */
@@ -41,36 +40,37 @@ a:hover,a:focus,a:visited{
 .cbp_tmtimeline > li .cbp_tmtime {
   display: block;
   width: 25%;
-  padding-right: 100px;
   position: absolute;
 }
 
 .cbp_tmtimeline > li .cbp_tmtime span {
   display: block;
-  text-align: right;
+  text-align: center;
 }
 
 .cbp_tmtimeline > li .cbp_tmtime span:first-child {
   font-size: 0.9em;
   color: #bdd0db;
+  margin-left: -1em;
 }
 
 .cbp_tmtimeline > li .cbp_tmtime span:last-child {
-  font-size: 2.9em;
+  font-size: 2.0em;
   color: #3594cb;
 }
 
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child {
   color: #6cbfee;
+  font-size: 1.5em;
 }
 
 /* Right content */
 .cbp_tmtimeline > li .cbp_tmlabel {
-  margin: 0 0 15px 25%;
+  margin: 0 0 1em 25%;
   background: #3594cb;
   color: #fff;
-  padding: 2em;
+  padding: 1.5em;
   font-size: 1.2em;
   font-weight: 300;
   line-height: 1.4;
@@ -84,7 +84,7 @@ a:hover,a:focus,a:visited{
 
 .cbp_tmtimeline > li .cbp_tmlabel h2 { 
   margin-top: 0px;
-  padding: 0 0 10px 0;
+  padding: 0 0 0.8em 0;
   border-bottom: 1px solid rgba(255,255,255,0.4);
 }
 
@@ -98,8 +98,8 @@ a:hover,a:focus,a:visited{
   position: absolute;
   pointer-events: none;
   border-right-color: #3594cb;
-  border-width: 10px;
-  top: 10px;
+  border-width: 0.8em;
+  top: 0.8em;
 }
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel:after {
@@ -108,26 +108,26 @@ a:hover,a:focus,a:visited{
 
 /* The icons */
 .cbp_tmtimeline > li .cbp_tmicon {
-  width: 40px;
-  height: 40px;
+  width: 2.0em;
+  height: 2.0em;
   font-family: 'ecoico';
   speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
-  font-size: 1.4em;
-  line-height: 40px;
+  font-size: 0.8em;
+  line-height: 2.0em;
   -webkit-font-smoothing: antialiased;
   position: absolute;
   color: #fff;
   background: #46a4da;
   border-radius: 50%;
-  box-shadow: 0 0 0 8px #afdcf8;
+  box-shadow: 0 0 0 0.5em #afdcf8;
   text-align: center;
   left: 20%;
   top: 0;
-  margin: 0 0 0 -25px;
+  margin: 1.2em 0 0 -0.6em;
 }
 
 .cbp_tmicon-phone:before {
@@ -147,15 +147,14 @@ a:hover,a:focus,a:visited{
 }
 
 
-/* Example Media Queries */
-@media screen and (max-width: 65.375em) {
 
+@media screen and (max-width: 64em) {
   .cbp_tmtimeline > li .cbp_tmtime span:last-child {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 }
 
-@media screen and (max-width: 47.2em) {
+@media screen and (max-width: 48em) {
   .cbp_tmtimeline:before {
     display: none;
   }
@@ -163,7 +162,7 @@ a:hover,a:focus,a:visited{
   .cbp_tmtimeline > li .cbp_tmtime {
     width: 100%;
     position: relative;
-    padding: 0 0 20px 0;
+    padding: 0 0 1.25em 0;
   }
 
   .cbp_tmtimeline > li .cbp_tmtime span {
@@ -194,6 +193,6 @@ a:hover,a:focus,a:visited{
     position: relative;
     float: right;
     left: auto;
-    margin: -55px 5px 0 0px;
+    margin: -3.2em 5px 0 0px;
   } 
 }

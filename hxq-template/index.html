@@ -12,9 +12,9 @@ layout: default
           <header class="post-header">
             <h2 class="post-title">{{ post.title }}</h2>
               <p class="post-meta">By&nbsp;{{ post.author}}&nbsp;&nbsp;&nbsp;&nbsp;{{ post.date | date: "%m月%d日%Y" }}&nbsp;&nbsp;
-                <a class="post-category-{{ post.tags| first}}" href="/type/#{{ post.tags| first}}"> {{ post.tags | first}}</a>
-                <a class="post-category-{{ post.tags[1] }}" href="/type/#{{ post.tags[1] }}">  {{ post.tags[1] }}</a>
-                <a class="post-category-{{ post.tags[2] }}" href="/type/#{{ post.tags[2] }}">  {{ post.tags[2] }}</a>
+                <a class="post-category-{{ post.tags| first}}" href="{{'/list/tag.html'| prepend: site.baseurl }}"> {{ post.tags | first}}</a>
+                <a class="post-category-{{ post.tags[1] }}" href="{{'/list/tag.html'| prepend: site.baseurl }}">  {{ post.tags[1] }}</a>
+                <a class="post-category-{{ post.tags[2] }}" href="{{'/list/tag.html'| prepend: site.baseurl }}">  {{ post.tags[2] }}</a>
               </p>
           </header>
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Welcome"
-date:   2014-12-21 22:19:05
+date:   2013-12-21 22:19:05
 author: 郝锡强
 categories: blog
 letex: true
@@ -28,20 +28,12 @@ $$
 $$
 
 $$a^2 + b^2 = c^2$$
-
-
-
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
-
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
-
-
-
 When $a \ne 0$, there are two solutions to $ \(ax^2 + bx + c = 0\) $ and they are 
 
 
-|[Jekyll](http://jekyllrb.com/)  |静态博客| Version 2.4.+|
+
+
+|[Jekyll](http://jekyllrb.com/)  |静态博客| Version 2.5.2|
+|[MathJax](http://www.mathjax.org/)  |Letex| Version 2.4.0|
 |[Pure](http://purecss.io/)     | 雅虎前端框架|Version 0.5.0|
 |[Duoshuo](http://duoshuo.com/)|多说评论|Version 1.0.0|
