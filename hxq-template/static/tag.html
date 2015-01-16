@@ -1,0 +1,33 @@
+---
+layout: default
+title : 标签
+---
+<script type="text/javascript">
+    function getParam(){
+        var index=window.location.href.indexOf("?");
+        var tag;
+        if(index>0){    
+            var param=window.location.href.substr(index+1);
+            tag =param.split("=")[1];
+        } 
+    }
+    getParam();
+</script>
+<div id="tag-content">
+    <ul class="tags">
+    {% for tag in site.tags %}
+            <li class="tag-li"><a>{{ tag[0]}}<span class="tag-span">{{tag[1].size}}</span></a></li>
+            
+            <ul class="tag-post">
+                {% for post in tag[1] %}
+                    <li>
+                        <a href="{{ post.url  }}" target="_blank">{{ post.title }}</a><span>{{ post.date | date: "%Y-%m-%d" }}</span>                
+                    </li>
+               
+                {% endfor %}
+            </ul>
+    {% endfor %}
+    </ul>
+</div>
+
+<link rel="stylesheet" href="{{ '/css/tag.css' | prepend: site.baseurl }}" type="text/css" media="screen" />

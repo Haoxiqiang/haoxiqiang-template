@@ -10,43 +10,42 @@ layout: default
 
         <section class="post">
           <header class="post-header">
-            <h2 class="post-title">{{ post.title }}</h2>
+            <h2 class="post-title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
               <p class="post-meta">By&nbsp;{{ post.author}}&nbsp;&nbsp;&nbsp;&nbsp;{{ post.date | date: "%m月%d日%Y" }}&nbsp;&nbsp;
-                <a class="post-category-{{ post.tags| first}}" href="{{'/list/tag.html'| prepend: site.baseurl }}"> {{ post.tags | first}}</a>
-                <a class="post-category-{{ post.tags[1] }}" href="{{'/list/tag.html'| prepend: site.baseurl }}">  {{ post.tags[1] }}</a>
-                <a class="post-category-{{ post.tags[2] }}" href="{{'/list/tag.html'| prepend: site.baseurl }}">  {{ post.tags[2] }}</a>
+                <a class="post-category-{{ post.tags| first}}" href="{{'/static/tag.html'| prepend: site.baseurl }}?tag={{ post.tags | first}}"> {{ post.tags | first}}</a>
+                <a class="post-category-{{ post.tags[1] }}" href="{{'/static/tag.html'| prepend: site.baseurl }}?tag={{ post.tags[1] }}">  {{ post.tags[1] }}</a>
+                <a class="post-category-{{ post.tags[2] }}" href="{{'/static/tag.html'| prepend: site.baseurl }}?tag={{ post.tags[2] }}">  {{ post.tags[2] }}</a>
               </p>
           </header>
 
             <div class="post-content">
                 {{ post.content | split:'<!-- more -->'| first }}
             </div>
-             <a href="{{ post.url | prepend: site.baseurl }}" class="post-category-read">阅读全文</a>
         </section>
 
       {% endfor %}
     </div>
 
 
-    <div class="pure-g pagination ">
+    <div class="pure-g">
         <div class="pure-u-1-2">
           {% if paginator.previous_page %}
             
             {% if paginator.page == 2 %}
-              <a class="pagination-item" href="{{site.baseurl }}/">Newer</a>
+              <a class="pagination-item-yes" href="{{site.baseurl }}/">Newer</a>
             {% else %}
-              <a class="pagination-item" href="{{'/page/' | prepend: site.baseurl }}{{paginator.previous_page}}">Newer</a>
+              <a class="pagination-item-yes" href="{{'/page/' | prepend: site.baseurl }}{{paginator.previous_page}}">Newer</a>
             {% endif %}
 
           {% else %}
-              <span class="pagination-item">已在第一頁</span>
+              <a class="pagination-item-no">已在第一頁</a>
           {% endif %}
         </div>
         <div class="pure-u-1-2">
           {% if paginator.next_page %}
-            <a class="pagination-item" href="{{'/page/' | prepend: site.baseurl }}{{paginator.next_page}}">Older</a>
+            <a class="pagination-item-yes" href="{{'/page/' | prepend: site.baseurl }}{{paginator.next_page}}">Older</a>
           {% else %}
-            <span class="pagination-item">已在最終頁</span>
+            <a class="pagination-item-no">已在最終頁</a>
           {% endif %}
         </div>
     </div>

@@ -8,11 +8,11 @@ comments: true
      <!--    <h1 class="content-subhead">Pinned Post</h1> -->
       <header class="post-header">
 
-        <h2 class="post-title">{{ page.title }}</h2>
+        <h2 class="post-title"><a>{{ page.title }}</a></h2>
           <p class="post-meta">By&nbsp;{{ page.author}}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.date | date: "%m月%d日%Y" }}&nbsp;&nbsp;
-            <a class="post-category-{{ page.tags| first}}" href="{{'/list/tag.html'| prepend: site.baseurl }}"> {{ page.tags | first}}</a>
-            <a class="post-category-{{ page.tags[1] }}" href="{{'/list/tag.html'| prepend: site.baseurl }}">  {{ page.tags[1] }}</a>
-            <a class="post-category-{{ page.tags[2] }}" href="{{'/list/tag.html'| prepend: site.baseurl }}">  {{ page.tags[2] }}</a>
+            <a class="post-category-{{ page.tags| first}}" href="{{'/static/tag.html'| prepend: site.baseurl }}?tag={{page.tags | first}}"> {{ page.tags | first}}</a>
+            <a class="post-category-{{ page.tags[1] }}" href="{{'/static/tag.html'| prepend: site.baseurl }}?tag={{ page.tags[1]}}">  {{ page.tags[1] }}</a>
+            <a class="post-category-{{ page.tags[2] }}" href="{{'/static/tag.html'| prepend: site.baseurl }}?tag={{ page.tags[2]}}">  {{ page.tags[2] }}</a>
           </p>
       </header>
 
@@ -24,18 +24,18 @@ comments: true
 
     <div class="pure-g pagination ">
         <div class="pure-u-1-2">
-            {% if page.previous %}
-              <a class="pagination-item" href="{{ page.previous.url | prepend: site.baseurl }} " title="{{ page.previous.title }} ">{{ page.previous.title }}</a>
-            {% else %}
-              <span class="pagination-item-no">上一篇</span>
-            {% endif %}
+          {% if page.next %}
+            <a class="pagination-item-yes" href="{{ page.next.url | prepend: site.baseurl }}" title="{{ page.next.title }}">{{ page.next.title }}</a>
+          {% else %}
+            <a class="pagination-item-no">上一篇</a>
+          {% endif %}
         </div>
         <div class="pure-u-1-2">
-          {% if page.next %}
-            <a class="pagination-item" href="{{ page.next.url | prepend: site.baseurl }}" title="{{ page.next.title }}">{{ page.next.title }}</a>
-          {% else %}
-            <span class="pagination-item-no">下一篇</span>
-          {% endif %}
+            {% if page.previous %}
+              <a class="pagination-item-yes" href="{{ page.previous.url | prepend: site.baseurl }} " title="{{ page.previous.title }} ">{{ page.previous.title }}</a>
+            {% else %}
+              <a class="pagination-item-no">下一篇</a>
+            {% endif %}
         </div>
     </div>
     <div class="comment">
