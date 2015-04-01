@@ -30,7 +30,7 @@ $$
 $$a^2 + b^2 = c^2$$
 When $a \ne 0$, there are two solutions to $ \(ax^2 + bx + c = 0\) $ and they are 
 
-
+![RecyclerView01](../source/images/blog/RecyclerView01.png)
 
 
 |[Jekyll](http://jekyllrb.com/)  |静态博客| Version 2.5.2|
