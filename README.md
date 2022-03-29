@@ -17,6 +17,12 @@ You can easily create your blog by the jekyll template.
 
 
 * Install jekyll  (if windows,you should install [Ruby](https://www.ruby-lang.org/en/installation/) first)
+* you can update all deps.
+	```
+	gem	update
+	gem	install jekyll
+	gem	install github-pages
+	```
 
 >
 We highly recommend installing Jekyll on your computer to preview your site and help diagnose troubled builds before publishing your site on GitHub Pages.
@@ -36,6 +42,10 @@ Luckily, installing Jekyll on your computer, and ensuring your computer most clo
 Use the command in `hxq-template`.
 
 ```
+cd hxq-template
+bundle install
+bundle add webrick
+
 bundle exec jekyll server
 ```
 

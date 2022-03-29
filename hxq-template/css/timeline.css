@@ -1,7 +1,7 @@
 /**
  * this css from Vertical Timeline
  **/
-a{
+a {
   color: white;
   text-decoration: none;
 }
@@ -10,11 +10,11 @@ a{
   padding: 0;
   list-style: none;
   position: relative;
-} 
+}
 
 /* The line */
 .cbp_tmtimeline:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -46,10 +46,9 @@ a{
 }
 
 .cbp_tmtimeline > li .cbp_tmtime span:last-child {
-  font-size: 2.0em;
+  font-size: 2em;
   color: #3594cb;
 }
-
 
 .cbp_tmtimeline > li:nth-child(odd) .cbp_tmtime span:last-child {
   color: #6cbfee;
@@ -73,10 +72,10 @@ a{
   background: #6cbfee;
 }
 
-.cbp_tmtimeline > li .cbp_tmlabel h2 { 
+.cbp_tmtimeline > li .cbp_tmlabel h2 {
   margin-top: 0px;
   padding: 0 0 0.8em 0;
-  border-bottom: 1px solid rgba(255,255,255,0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 /* The triangle */
@@ -99,16 +98,16 @@ a{
 
 /* The icons */
 .cbp_tmtimeline > li .cbp_tmicon {
-  width: 2.0em;
-  height: 2.0em;
-  font-family: 'ecoico';
+  width: 2em;
+  height: 2em;
+  font-family: "ecoico";
   speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   font-size: 0.8em;
-  line-height: 2.0em;
+  line-height: 2em;
   -webkit-font-smoothing: antialiased;
   position: absolute;
   color: #fff;
@@ -136,8 +135,6 @@ a{
 .cbp_tmicon-earth:before {
   content: "";
 }
-
-
 
 @media screen and (max-width: 64em) {
   .cbp_tmtimeline > li .cbp_tmtime span:last-child {
@@ -185,5 +182,5 @@ a{
     float: right;
     left: auto;
     margin: -3.2em 5px 0 0px;
-  } 
+  }
 }

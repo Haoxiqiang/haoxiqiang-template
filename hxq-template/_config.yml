@@ -24,7 +24,6 @@ textile_ext:  "textile"
 #markdown: rdiscount
 markdown: kramdown
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-highlighter: pygments
 
 kramdown: 
   input: GFM
@@ -32,8 +31,6 @@ kramdown:
 permalink: /:categories/:year:month:day-:title.html
 paginate: 5
 paginate_path: /page/:num
-relative_permalinks: true
-
 
 #在发布文章时使用一个未来的日期
 future: true
@@ -43,6 +40,10 @@ lsi:      false
 safe:     true
 
 comments: true
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-paginate
 
 sass:
   sass_dir: _sass

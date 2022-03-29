@@ -3,55 +3,60 @@ layout: default
 comments: true
 ---
 <div>
-    <!-- A wrapper for all the blog posts -->
-    <div class="post">
-     <!--    <h1 class="content-subhead">Pinned Post</h1> -->
-      <header class="post-header">
+  <!-- A wrapper for all the blog posts -->
+  <div class="post">
+    <!--    <h1 class="content-subhead">Pinned Post</h1> -->
+    <header class="post-header">
 
-        <h2 class="post-title"><a>{{ page.title }}</a></h2>
-          <p class="post-meta">By&nbsp;{{ page.author}}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.date | date: "%m月%d日%Y" }}&nbsp;&nbsp;
-            <a class="post-category-{{ page.tags| first}}" href="{{'/static/tag.html'| prepend: site.baseurl }}?tag={{page.tags | first}}"> {{ page.tags | first}}</a>
-            <a class="post-category-{{ page.tags[1] }}" href="{{'/static/tag.html'| prepend: site.baseurl }}?tag={{ page.tags[1]}}">  {{ page.tags[1] }}</a>
-            <a class="post-category-{{ page.tags[2] }}" href="{{'/static/tag.html'| prepend: site.baseurl }}?tag={{ page.tags[2]}}">  {{ page.tags[2] }}</a>
-          </p>
-      </header>
+      <h2 class="post-title"><a>{{ page.title }}</a></h2>
+      <p class="post-meta">
+        By&nbsp;{{ page.author}}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.date | date: "%m月%d日%Y" }}&nbsp;&nbsp;
+        <a class="post-category-{{ page.tags| first}}"
+          href="{{'/static/tag.html'| prepend: site.baseurl }}?tag={{page.tags | first}}"> {{ page.tags | first}}</a>
+        <a class="post-category-{{ page.tags[1] }}"
+          href="{{'/static/tag.html'| prepend: site.baseurl }}?tag={{ page.tags[1]}}"> {{ page.tags[1] }}</a>
+        <a class="post-category-{{ page.tags[2] }}"
+          href="{{'/static/tag.html'| prepend: site.baseurl }}?tag={{ page.tags[2]}}"> {{ page.tags[2] }}</a>
+      </p>
+    </header>
 
-        <div class="post-content">
-            {{ content}}
-        </div>
+    <div class="post-content">
+      {{ content}}
     </div>
-    
+  </div>
 
-    <div class="pure-g pagination ">
-        <div class="pure-u-1-2">
-          {% if page.next %}
-            <a class="pagination-item-yes" href="{{ page.next.url | prepend: site.baseurl }}" title="{{ page.next.title }}">{{ page.next.title }}</a>
-          {% else %}
-            <a class="pagination-item-no">上一篇</a>
-          {% endif %}
-        </div>
-        <div class="pure-u-1-2">
-            {% if page.previous %}
-              <a class="pagination-item-yes" href="{{ page.previous.url | prepend: site.baseurl }} " title="{{ page.previous.title }} ">{{ page.previous.title }}</a>
-            {% else %}
-              <a class="pagination-item-no">下一篇</a>
-            {% endif %}
-        </div>
-    </div>
-    <div class="comment">
-        {% if page.comments  %}
-          {% if site.comments %}
-            {% include comments-disqus.html %}
-          {% else %}
-            {% include comments-duoshuo.html %}
-          {% endif %}
-        {% endif %}
-    </div>
 
-    {% if page.letex  %}
-      {% include letex.html %}
+  <div class="pure-g pagination ">
+    <div class="pure-u-1-2">
+      {% if page.next %}
+      <a class="pagination-item-yes" href="{{ page.next.url | prepend: site.baseurl }}"
+        title="{{ page.next.title }}">{{ page.next.title }}</a>
+      {% else %}
+      <a class="pagination-item-no">上一篇</a>
+      {% endif %}
+    </div>
+    <div class="pure-u-1-2">
+      {% if page.previous %}
+      <a class="pagination-item-yes" href="{{ page.previous.url | prepend: site.baseurl }} "
+        title="{{ page.previous.title }} ">{{ page.previous.title }}</a>
+      {% else %}
+      <a class="pagination-item-no">下一篇</a>
+      {% endif %}
+    </div>
+  </div>
+  <div class="comment">
+    {% if page.comments  %}
+    {% if site.comments %}
+    {% include comments-disqus.html %}
+    {% else %}
+    {% include comments-duoshuo.html %}
     {% endif %}
-    
-    {% include footer.html %}
-</div>
+    {% endif %}
+  </div>
 
+  {% if page.letex  %}
+  {% include letex.html %}
+  {% endif %}
+
+  {% include footer.html %}
+</div>

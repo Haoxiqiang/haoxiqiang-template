@@ -4,19 +4,20 @@ title : 实例集
 ---
 <div>
     <ul class="tags">
-    {% for tag in site.tags %}
-    
+        {% for tag in site.tags %}
+
         <li class="tag-li"><a>{{ tag[0]}}<span class="tag-span">{{tag[1].size}}</span></a></li>
-        
+
         <ul class="tag-post">
             {% for post in tag[1] %}
-                <li>
-                    <a href="{{ post.url  }}" target="_blank">{{ post.title }}</a><span>{{ post.date | date: "%Y-%m-%d" }}</span>                
-                </li>
+            <li>
+                <a href="{{ post.url  }}"
+                    target="_blank">{{ post.title }}</a><span>{{ post.date | date: "%Y-%m-%d" }}</span>
+            </li>
             {% endfor %}
         </ul>
 
-    {% endfor %}
+        {% endfor %}
     </ul>
 </div>
 

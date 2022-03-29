@@ -1,39 +1,41 @@
 ---
 layout: post
-title:  "Welcome"
-date:   2013-12-21 22:19:05
+title: "Welcome"
+date: 2013-12-21 22:19:05
 author: 郝锡强
 categories: blog
 letex: true
-tags: [design,java,ios,blog,css,javascript]
+tags: [design, java, ios, blog, css, javascript]
 ---
+
 in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
 <!-- more -->
+
 Jekyll also offers powerful support for code snippets:
 
 {% highlight bash %}
 def print_hi(name)
-  puts "Hi, #{name}"
+puts "Hi, #{name}"
 end
 print_hi('Tom')
 #=> prints 'Hi,STDOUT.
 {% endhighlight %}
 
-$$ 
-\begin{aligned} \dot{x} &= \sigma(y-x) \\ 
-\dot{y} &= \rho x - y - xz \\ 
-\dot{z} &= -\beta z + xy \end{aligned} 
+$$
+\begin{aligned} \dot{x} &= \sigma(y-x) \\
+\dot{y} &= \rho x - y - xz \\
+\dot{z} &= -\beta z + xy \end{aligned}
 $$
 
 $$a^2 + b^2 = c^2$$
-When $a \ne 0$, there are two solutions to $ \(ax^2 + bx + c = 0\) $ and they are 
+When $a \ne 0$, there are two solutions to $ \(ax^2 + bx + c = 0\) $ and they are
 
 ![RecyclerView01](../source/images/blog/RecyclerView01.png)
 
-
-|[Jekyll](http://jekyllrb.com/)  |静态博客| Version 2.5.2|
-|[MathJax](http://www.mathjax.org/)  |Letex| Version 2.4.0|
-|[Pure](http://purecss.io/)     | 雅虎前端框架|Version 0.5.0|
+|[Jekyll](http://jekyllrb.com/) |静态博客| Version 4.2.2|
+|[MathJax](http://www.mathjax.org/) |Letex| Version 3.2.0|
+|[Pure](http://purecss.io/) | 雅虎前端框架|Version 0.5.0|
 |[Duoshuo](http://duoshuo.com/)|多说评论|Version 1.0.0|
